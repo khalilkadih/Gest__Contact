@@ -9,12 +9,12 @@
     <title>Sign in</title>
 </head>
 <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">contact list</a>
-                <a class="navbar-brand" href="signin.php">login</a>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">contact list</a>
+            <a class="navbar-brand" href="signin.php">login</a>
+            </div>
+        </nav>
             <main class="container-fluid ">
                 <section class="row ">
                     <div class="col-12 col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 mt-5 pt-5">

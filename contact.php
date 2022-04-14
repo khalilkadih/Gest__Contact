@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row">
             <div class="col">
-                <div class="card shadow">
+                <div class="card shadow w-80">
                     <div class="card-body">
                         <h1 class="fw-bold">Contacts !</h1>
                         <h5>No contacts</h5>
@@ -40,10 +40,10 @@
                         </div>
                         <div class=" ms-4 mb-3 form-group">
                                     <label for="email" class="form-label">Email:</label>
-                                    <input type="Email" class="form-control" name="email" placeholder="Enter your Email"  id="ToOpenPage" required>
+                                    <input type="Email" class="form-control w-50" name="email" placeholder="Enter your Email"  id="ToOpenPage" required>
                         </div>  
                         <div class="ms-4 mt-4 form-floating">
-                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="">
+                            <input type="text" class="form-control w-50" id="floatingInputGrid" placeholder="" value="">
                             <label for="floatingInputGrid">Address</label>
                         </div>
                         <button type="submit" class=" ms-4 bbtn btn-primary w-30 fw-bold mt-3">Submit</button>
