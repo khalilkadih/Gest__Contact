@@ -21,6 +21,7 @@
         <div class="container">
             <div class="row">
                     <div class="col">
+                        <?php include('message.php') ?>
                         <div class="card shadow">
                             <div class="card-body">
                                 <h1 class="fw-bold">Hello !</h1>
