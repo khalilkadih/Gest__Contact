@@ -1,3 +1,7 @@
+<?php 
+include_once('db/app.php');
+include_once("code/authentification_code.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,51 +12,47 @@
     <title>Contact List</title>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark">
-          <div class="container-fluid">
-              <a class="navbar-brand">Contact List</a>
-                <form class="d-flex">
-                    <a class="navbar-brand" href="signin.php">khalil</a>
-                    <a class="navbar-brand" href="signin.php">contact</a>
-                    <a class="navbar-brand" href="signin.php">logout</a>
-                </form>
-        </div>
-    </nav>
+    
+    <?php include('navBar.php')?>
+
     <main>
 
-<div class="container">
-    <div class="row">
-            <div class="col">
-                <div class="card shadow w-80">
-                    <div class="card-body">
-                        <h1 class="fw-bold">Contacts !</h1>
-                        <h5>No contacts</h5>
-                        <h3>Add Contact:</h3>
-                        <div class="input-group">
-                                <div class="m-3">
-                                     <label for="email" class="form-label">Name</label> 
-                                    <input type="text" aria-label="First name" class="form-control m-1">
-                                </div>
-                                 <div class="m-3">
-                                     <label for="email" class="form-label">phone</label>
-                                     <input type="text" aria-label="Last name" class="form-control m-1"> 
-                                </div>        
-                        </div>
-                        <div class=" ms-4 mb-3 form-group">
-                                    <label for="email" class="form-label">Email:</label>
-                                    <input type="Email" class="form-control w-50" name="email" placeholder="Enter your Email"  id="ToOpenPage" required>
-                        </div>  
-                        <div class="ms-4 mt-4 form-floating">
-                            <input type="text" class="form-control w-50" id="floatingInputGrid" placeholder="" value="">
-                            <label for="floatingInputGrid">Address</label>
-                        </div>
-                        <button type="submit" class=" ms-4 bbtn btn-primary w-30 fw-bold mt-3">Submit</button>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                
+                    <?php include('message.php') ?>
 
+                    <div class="card shadow w-80">
+                        <div class="card-body">
+                            <h1 class="fw-bold">Contacts !</h1>
+                            <h5>No contacts</h5>
+                            <h3>Add Contact:</h3>
+                            <div class="input-group">
+                                    <div class="m-3">
+                                        <label for="email" class="form-label">Name</label> 
+                                        <input type="text" aria-label="First name" class="form-control m-1">
+                                    </div>
+                                    <div class="m-3">
+                                        <label for="email" class="form-label">phone</label>
+                                        <input type="text" aria-label="Last name" class="form-control m-1"> 
+                                    </div>        
+                            </div>
+                            <div class=" ms-4 mb-3 form-group">
+                                        <label for="email" class="form-label">Email:</label>
+                                        <input type="Email" class="form-control w-50" name="email" placeholder="Enter your Email"  id="ToOpenPage" required>
+                            </div>  
+                            <div class="ms-4 mt-4 form-floating">
+                                <input type="text" class="form-control w-50" id="floatingInputGrid" placeholder="" value="">
+                                <label for="floatingInputGrid">Address</label>
+                            </div>
+                            <button type="submit" class=" ms-4 bbtn btn-primary w-30 fw-bold mt-3">Submit</button>
+
+                        </div>
                     </div>
-                </div>
-         </div>
+            </div>
+        </div>
     </div>
-</div>
 
 </main>
 </body>
