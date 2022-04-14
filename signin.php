@@ -1,7 +1,7 @@
 <?php
 include_once('db/app.php');
 include_once("code/authentification_code.php");
-
+$signin->islogged();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,16 +14,15 @@ include_once("code/authentification_code.php");
     <title>Sign in</title>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">contact list</a>
-            <a class="navbar-brand" href="signin.php">login</a>
-            </div>
-        </nav>
+            <?php include('navBar.php')?>
+
             <main class="container-fluid ">
                 <section class="row ">
                     <div class="col-12 col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 mt-5 pt-5">
-                        <div class="card shadow ">
+                       
+                    <?php include('message.php') ?>
+                                        
+                    <div class="card shadow ">
                             <div class="card-body p-5 ">
                                 <h1 class="text-start border-start border-5 border-primary ps-1 fw-bold">Gestion Contact</h1>
                                 <h2 class="h3 text-center text-uppercase mb-3 fw-bold">Sign in </h2>
@@ -38,12 +37,12 @@ include_once("code/authentification_code.php");
                                         <label for="PasswortInput" class="form-label mt-1">Password :</label>
                                         <input type="password" name="password"  placeholder="Enter your Password" class="form-control" required id="PasswortInput">
                                     </div>
-                                    <div class="form-check mb-3">
+                                    <!-- <div class="form-check mb-3">
                                         <input class="form-check-input" name='remember_me'type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                             Remember me
                                         </label>
-                                    </div>
+                                    </div> -->
 
                                     <button type="submit" name="login" class="btn btn-primary w-100 fw-bold">Login</button>
                                 </form>
@@ -55,7 +54,6 @@ include_once("code/authentification_code.php");
                                 <a href="signup.php" class="">Sign up</a> <span class="mt-3">here.</span>
 
                             </div>
-                            <span class="text-center mb-5 mt-.5 ">forget your password ? <a href="# ">Reset password</a></span>
                         </div>
 
                 </section>
