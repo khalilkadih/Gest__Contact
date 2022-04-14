@@ -9,6 +9,16 @@
 
     $signin=new loginController;
 
+    if(isset($_POST['logout_btn'])){
+        $checklogoutuser=$signin->logout();
+        if($checklogoutuser){
+            redirect('Logged out successefully','signin.php');
+        }
+        else{
+            return  false;
+
+        }
+    }
 
     if(isset($_POST['login']))
     {
