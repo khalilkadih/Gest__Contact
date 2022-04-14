@@ -1,6 +1,7 @@
 <?php 
 include_once('db/app.php');
 include_once("code/authentification_code.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +15,6 @@ include_once("code/authentification_code.php");
 </head>
 <body>
          <?php include('navBar.php')?>
-         <?php print_r($_SESSION['auth_user']['user_fname']);
-
-          print_r($_SESSION['auth_user']['user_lname']);
-          
-          
-          ?>
         <main>
             <div class="container">
                 <div class="row">
@@ -41,6 +36,7 @@ include_once("code/authentification_code.php");
             </div>
         
         </main>
-    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
