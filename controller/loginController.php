@@ -31,9 +31,9 @@ class loginController
         $_SESSION['auth_user']=
         [
             'user_id'=>$data['id-User'],
+            'user_lname'=>$data['firstName'],
             'user_fname'=>$data['firstName'],
-            'user_lname'=>$data['lastName'],
-            'user_email'=>$data['email'],
+            'user_email'=>$data['email']
         ];
     }
     public function islogged()
@@ -43,6 +43,20 @@ class loginController
             redirect('You are already in login ','index.php');
         }
         else 
+        {
+            return false;
+        }
+    }
+
+    public function logout()
+    {
+        if(isset($_SESSION['authenticated']) === TRUE)
+        {
+            unset($_SESSION['authenticated']);
+            unset($_SESSION['auth_user']);
+            return true;
+        }
+        else
         {
             return false;
         }
