@@ -1,3 +1,8 @@
+<?php
+include_once('db/app.php');
+include_once("code/authentification_code.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +45,7 @@
                                         </label>
                                     </div>
 
-                                    <button type="submit" name="submit"class="btn btn-primary w-100 fw-bold">Login</button>
+                                    <button type="submit" name="login" class="btn btn-primary w-100 fw-bold">Login</button>
                                 </form>
                             </div>
                             <div class="text-center"> 
