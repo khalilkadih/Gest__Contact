@@ -1,7 +1,7 @@
 <?php
-
 // include_once('db/app.php');
-class loginController{
+class loginController
+{
 
     public function __construct()
     {
@@ -23,40 +23,29 @@ class loginController{
         else {
             return false;
         }
-
     }
     private function userAuthentification($data)
     {
-
         $_SESSION['authenticated']=true;
         // $_SESSION['Auto_role']=$data['role-as'];
         $_SESSION['auth_user']=
         [
             'user_id'=>$data['id-User'],
             'user_fname'=>$data['firstName'],
-            'user_lname'=>$data['lasttName'],
-            'user_email'=>$data['email']
+            'user_lname'=>$data['lastName'],
+            'user_email'=>$data['email'],
         ];
     }
-
-
-
     public function islogged()
     {
-        if($_SESSION['authenticated']=== TRUE)
+        if(isset($_SESSION['authenticated']) === TRUE)
         {
             redirect('You are already in login ','index.php');
-
         }
         else 
         {
-
             return false;
         }
-
-
     }
 }
-
-
 ?>

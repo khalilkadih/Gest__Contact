@@ -1,13 +1,13 @@
 <?php
 
 
-// include_once('db/app.php');
-// include_once('controller/registerController.php');
-include_once('controller/registerController.php');
-include_once('controller/loginController.php');
+    // include_once('db/app.php');
+    // include_once('controller/registerController.php');
+    include_once('controller/registerController.php');
+    include_once('controller/loginController.php');
 
 
-        $signin=new loginController();
+    $signin=new loginController;
 
 
     if(isset($_POST['login']))
@@ -72,7 +72,7 @@ if(isset($_POST["submit"])){
 
         redirect("Password and confirm password Not Match","./signup.php");
     }
-    $resultOfEmail=$register->isUserExist($email);
+        $resultOfEmail=$register->isUserExist($email);
 
 
 

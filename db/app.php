@@ -11,11 +11,10 @@ include_once('db.php');
 
 $db=new db_conexion;
 
- function base_url($slug)
- {
-    echo SITE_URL.$slug;
-
-}
+    function base_url($slug)
+    {
+        echo SITE_URL.$slug;    
+    }
 
 function validateInput($dbcnx,$input)
 {

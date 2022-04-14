@@ -14,6 +14,12 @@ include_once("code/authentification_code.php");
 </head>
 <body>
          <?php include('navBar.php')?>
+         <?php print_r($_SESSION['auth_user']['user_fname']);
+
+          print_r($_SESSION['auth_user']['user_lname']);
+          
+          
+          ?>
         <main>
             <div class="container">
                 <div class="row">
