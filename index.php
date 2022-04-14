@@ -1,3 +1,7 @@
+<?php 
+include_once('db/app.php');
+include_once("code/authentification_code.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,39 +13,28 @@
     <title>page d'acceuill</title>
 </head>
 <body>
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">contact list</a>
-        <a class="navbar-brand" href="signin.php">login</a>
-        </div>
-    </nav>
-    <main>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col">
-                        <?php include('message.php') ?>
-                        <div class="card shadow">
-                            <div class="card-body">
-                                <h1 class="fw-bold">Hello !</h1>
-                                    <div class="text-center fw-bold p-3">
-                                        <a href="signup.php">sign up</a> to start creating your contacts list.
-                                        <p class="p-3 m-3">already have an account ? <a href="signin.php">login here</a></p>
-                                    </div>
+         <?php include('navBar.php')?>
+        <main>
+            <div class="container">
+                <div class="row">
+                        <div class="col">
+                            <?php include('message.php') ?>
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h1 class="fw-bold">
+                                        Hello !
+                                    </h1>
+                                        <div class="text-center fw-bold p-3">
+                                            <a href="signup.php">sign up</a> to start creating your contacts list.
+                                            <p class="p-3 m-3">already have an account ? <a href="signin.php">login here</a></p>
+                                        </div>
+                                </div>
                             </div>
-                        </div>
-                 </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        
+        </main>
     
-    </main>
-
-
-
-
-
-
-</div>
 </body>
 </html>

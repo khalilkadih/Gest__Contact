@@ -1,6 +1,8 @@
 <?php
 include_once('db/db.php');
 include_once("code/authentification_code.php");
+$signin->islogged();
+
 
 
 
@@ -19,12 +21,8 @@ include_once("code/authentification_code.php");
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="<?php base_url('index.php')?>">contact list</a>
-            <a class="navbar-brand" href="<?php base_url('signin.php')?>">login</a>
-        </div>
-    </nav>
+<?php include('navBar.php')?>
+
     <main class="container-fluid">
         <div class="row">
             <div class="col-12 col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 mt-5 pt-5">

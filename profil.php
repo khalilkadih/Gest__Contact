@@ -1,3 +1,9 @@
+<?php 
+
+
+include_once('db/app.php');
+include_once("code/authentification_code.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +16,8 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand">Contact List</a>
-                <form class="d-flex">
-                    <a class="navbar-brand" href="signin.php">khalil</a>
-                    <a class="navbar-brand" href="signin.php">contact</a>
-                    <a class="navbar-brand" href="signin.php">logout</a>
-                </form>
-        </div>
-    </nav>
+<?php include('navBar.php')?>
+
 <main>
 
 <div class="container">

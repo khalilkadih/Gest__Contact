@@ -4,27 +4,34 @@
 // include_once('db/app.php');
 // include_once('controller/registerController.php');
 include_once('controller/registerController.php');
-
-if(isset($_POST['login'])){
-
-    $email=validateInput($db->cnx,$_POST['email']);
-    $password=validateInput($db->cnx,$_POST['password']);
+include_once('controller/loginController.php');
 
 
-    $signin=new loginController();
-    $checklogin=$signin->userLogin();
-    if($checklogin)
+        $signin=new loginController();
+
+
+    if(isset($_POST['login']))
     {
 
-        redirect("Welcome to home page","./index.php");
 
-    }else
-    {
-        redirect("Eamil or password is not valid ","signin.php");
+        $email=validateInput($db->cnx,$_POST['email']);
+        $password=validateInput($db->cnx,$_POST['password']);
+
+
+    
+        $checklogin=$signin->userLogin($email,$password);
+        if($checklogin)
+        {
+
+            redirect("Welcome to home page","contact.php");
+
+        }else
+        {
+            redirect("Eamil or password is not valid ","signin.php");
+
+        }
 
     }
-
-}
 
 
 if(isset($_POST["submit"])){

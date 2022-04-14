@@ -1,19 +1,19 @@
 <?php
 
-// include_once('db/db.php');
+// include_once('db/app.php');
 class loginController{
 
     public function __construct()
     {
         
         $db=new db_conexion();
-        $this->cnx=$db;
+        $this->cnx=$db->cnx;
     }
-    public function userLogin()
+    public function userLogin($email,$password)
     {
-        $checkLogin="SELECT * FROM user WHERE email='khalil@gmail.com' AND Password='khalil'";
+        $checkLogin="SELECT * FROM user WHERE email='$email' AND Password='$password'";
         $res=$this->cnx->Query($checkLogin);
-        var_dump($res);
+
         if($res->num_rows > 0){
 
             $data=$res->fetch_assoc();
@@ -37,6 +37,24 @@ class loginController{
             'user_lname'=>$data['lasttName'],
             'user_email'=>$data['email']
         ];
+    }
+
+
+
+    public function islogged()
+    {
+        if($_SESSION['authenticated']=== TRUE)
+        {
+            redirect('You are already in login ','index.php');
+
+        }
+        else 
+        {
+
+            return false;
+        }
+
+
     }
 }
 
