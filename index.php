@@ -1,6 +1,5 @@
 <?php 
 include_once('db/app.php');
-include_once("code/authentification_code.php");
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ include_once("code/authentification_code.php");
     <title>page d'acceuill</title>
 </head>
 <body>
-         <?php include('navBar.php')?>
+         <?php include_once('navBar.php')?>
         <main>
             <div class="container">
                 <div class="row">

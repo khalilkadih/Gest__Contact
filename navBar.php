@@ -16,20 +16,22 @@
                         <a class="nav-link active"  href="<?php base_url('index.php')?>">Home</a>
                     </li>
 
-                        <?php if(isset($_SESSION['authenticated'])): ?>
+                        <?php if(isset($_SESSION['authenticated'])) : ?>
 
                         <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 
                                          <?php print_r($_SESSION['auth_user']['user_fname']);?> 
-                                       
-                                        <?php echo ($_SESSION['auth_user']['user_fname']);?>
+                        
+                                        <?php echo ($_SESSION['auth_user']['user_lname']);?>
 
-
-                                
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">My profil</a></li>
+                                        <li>
+                                            <a class="dropdown-item" href="<?php base_url('profil.php')?>">
+                                                 My profil
+                                            </a>
+                                        </li>
                                         <li>
                                             <form action="" method="POST">
 

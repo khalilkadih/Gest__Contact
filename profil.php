@@ -1,8 +1,10 @@
 <?php 
 
+include_once('controller/AuthentificationController.php');
+$userdata=$authentificated->userDetail();
 
-include_once('db/app.php');
-include_once("code/authentification_code.php");
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,21 +22,22 @@ include_once("code/authentification_code.php");
 
 <main>
 
+
 <div class="container">
     <div class="row">
             <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h1 class="fw-bold">Welcome ,Khalil !</h1>
+                        <h1 class="fw-bold">Welcome ,<?php echo $userdata['firstName'];?> !</h1>
                             <div class="fw-bold p-3">
                                 <div class="card" style="width:200 em;">
                                         <div class="card-header">
                                         your profile: 
                                         </div>
                                              <ul class="list-group list-group-flush">
-                                                <li class="list-group-item"> <span class="fw-bold">Username:</span> <span class="fw-lighter">khalil</span>   </li>
-                                                <li class="list-group-item"><span class="fw-bold">signup date:</span> <span class="fw-lighter">sun,07 apr 2019 16:11:25 +0000</span> </li>
-                                                <li class="list-group-item"> <span class="fw-bold">last login:</span> <span class="fw-lighter">sun,07 apr 2019 16:11:25 +0000</span> </li>
+                                                <li class="list-group-item"> <span class="fw-bold">Username:</span> <span class="fw-lighter"><?php echo $userdata['firstName']." ".$userdata['firstName'];?></span>   </li>
+                                                <li class="list-group-item"><span class="fw-bold">signup date:</span> <span class="fw-lighter"><?php echo $userdata['created_At'];?></span> </li>
+                                                <li class="list-group-item"> <span class="fw-bold">last login:</span> <span class="fw-lighter"><?php echo $userdata['created_At'];?></span> </li>
                                             </ul>
                                         </div>
                             </div> 
