@@ -1,6 +1,5 @@
     <?php
     include_once('db/db.php');
-    include_once("code/authentification_code.php");
     $signin->islogged();
 
     ?>

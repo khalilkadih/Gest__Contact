@@ -6,18 +6,18 @@
 
                 public function __construct()
                 {
-                $db=new db_conexion();
-                $this->cnx=$db->cnx;
-                
+                    $db=new db_conexion();
+                    $this->cnx=$db->cnx;
+                    
                 }
 
                     public function registeration($fname,$lname,$email,$password)
                 {
 
-                $registerQuery="INSERT INTO user(firstName, lastName, email, Password) 
-                VALUES ('$fname','$lname','$email','$password')";
-                $results=$this->cnx->Query($registerQuery);
-                return $results;
+                    $registerQuery="INSERT INTO user(firstName, lastName, email, Password) 
+                    VALUES ('$fname','$lname','$email','$password')";
+                    $results=$this->cnx->Query($registerQuery);
+                    return $results;
 
                 }
 
@@ -50,3 +50,4 @@
                     }
                 }
         }
+?>

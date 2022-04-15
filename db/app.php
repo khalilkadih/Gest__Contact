@@ -10,6 +10,7 @@ define('SITE_URL','https://localhost/GEST__CONTACT/');
 include_once('db.php');
 
 $db=new db_conexion;
+include("code/authentification_code.php");
 
     function base_url($slug)
     {
