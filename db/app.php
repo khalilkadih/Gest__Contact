@@ -19,7 +19,6 @@ include("code/authentification_code.php");
 
 function validateInput($dbcnx,$input)
 {
-
     return  mysqli_real_escape_string($dbcnx,$input);
 }
 function redirect($message,$page)
