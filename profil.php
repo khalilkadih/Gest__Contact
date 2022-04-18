@@ -1,6 +1,7 @@
 <?php 
 
 include_once('controller/AuthentificationController.php');
+// $authentificated= new AuthentificationController;
 $userdata=$authentificated->userDetail();
 
 

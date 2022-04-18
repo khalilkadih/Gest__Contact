@@ -1,6 +1,6 @@
 
 <nav class="navbar  navbar-expand-lg navbar-white bg-white shadow sticky-top">
-    <div class="container">
+    <div class="container-fluid">
                 <a class="navbar-brand "href="index.php">
                          <h5>
                               Gestion Contact
@@ -34,7 +34,6 @@
                                         </li>
                                         <li>
                                             <form action="" method="POST">
-
                                                 <button type="submit" name="logout_btn" class="dropdown-item">Logout</button>
                                             </form>
                                         </li>
