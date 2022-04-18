@@ -35,21 +35,21 @@
                                     <div class="mb-3 mt-4">
                                         <label for="firstName" class="form-label">First Name</label>
                                         <input type="text" class="form-control" id="firstName" name="firstName"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp" pattern="[A-Za-z]{3,}" title="Check your full name" minlength="3">
                                     </div>
                                     <div class="mb-3">
                                         <label for="lastName" class="form-label">last Name</label>
                                         <input type="text" class="form-control" id="lastName" name="lastName"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp" pattern="[A-Za-z]{3,}" title="Check your full name"  minlength="3">
                                     </div>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="email" name="email"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp" >
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password">
+                                        <input type="password" class="form-control" id="password" name="password" >
                                     </div>
                                     <div class="mb-3">
                                         <label for="conf_pwd" class="form-label">Password</label>
