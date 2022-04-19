@@ -12,7 +12,7 @@ $signin = new loginController;
 if (isset($_POST['logout_btn'])) {
     $checklogoutuser = $signin->logout();
     if ($checklogoutuser) {
-        redirect('Logged out successefully', 'signin.php');
+        redirect('Logged out successefully','signin.php','success');
     } else {
         return  false;
     }
@@ -26,9 +26,9 @@ if (isset($_POST['login'])) {
     $checklogin = $signin->userLogin($email, $password);
     if ($checklogin) {
 
-        redirect("Welcome to home page", "contact.php");
+        redirect("Welcome to home page", "contact.php",'success');
     } else {
-        redirect("Eamil or password is not valid ", "signin.php");
+        redirect("Eamil or password is not valid ", "signin.php",'danger');
     }
 }
 
@@ -49,19 +49,19 @@ if (isset($_POST["submit"])) {
 
         $resultsOfUser = $register->isUserExist($email);
         if ($resultsOfUser) {
-            redirect("already email exist", "signup.php");
+            redirect("already email exist", "signup.php",'danger');
         } else {
             $registerQuery = $register->registeration($fname, $lname, $email, $password);
             if ($registerQuery) {
 
-                redirect("Registred successfully", "signin.php");
+                redirect("Registred successfully", "signin.php","success");
             } else {
-                redirect("Somthing is wrong", "signup.php");
+                redirect("Somthing is wrong", "signup.php",'danger');
             }
         }
     } else {
 
-        redirect("Password and confirm password Not Match", "./signup.php");
+        redirect("Password and confirm password Not Match", "./signup.php",'danger');
     }
 
     $resultOfEmail = $register->isUserExist($email);

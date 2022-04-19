@@ -20,11 +20,11 @@ if(isset($_POST['updatedata']))
     $res=$contact->updatecontact($dataInput,$id_contact);
     if($res){
 
-        redirect('Contact Updated Successfully','contact.php');
+        redirect('Contact Updated Successfully','contact.php','success');
     }
     else 
     {
-        redirect('Something Wrong','profil.php');
+        redirect('Something Wrong','profil.php','danger');
     }
 
 

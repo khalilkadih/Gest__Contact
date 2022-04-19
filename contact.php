@@ -1,12 +1,10 @@
 <?php 
 include_once('db/app.php');
 include_once('controller/controllContact.php');
-// include_once('AutoLoad.php');
 
 
-// print_r($showContact);
-// $readData->
-// // $authentificated= new AuthentificationController;
+
+// $authentificated= new AuthentificationController;
 // $userdata=$authentificated->userDetail();
 ?>
 <!DOCTYPE html>
@@ -27,13 +25,9 @@ include_once('controller/controllContact.php');
             <div class="row">
                 <div class="col-lg-6 col-md-12">  
 
-                    <div>
                     
-                            <div class="alert alert-success" role="alert">
                                     <?php include('message.php');?>
-                            </div>
-
-                    </div>  
+                     
                     <div class="card shadow w-80 ">
                         <div class="card-body">
                                  <h1 class="fw-bold">Contacts !</h1>
@@ -239,6 +233,42 @@ $('.deletebtn').on('click', function ()
      $('#deletemodal input').val(contactId);
      console.log('delete user with id '+contactId);
 });
+});
+
+
+$(document).ready(function() {
+
+    
+$('.editbtn').on('click', function(e) {
+  //  console.log(e.target);
+    $('#editmodal').modal('show');
+
+    $tr = $(this).closest('tr');
+    // console.log($tr[0]);
+
+    let data = $tr.children("td").map(function() {
+        console.log(this);
+        return $(this).text();
+    }).get();
+    
+    // console.log(data);
+    
+    /////////////////////////
+
+    let children=$tr.children();
+    let id_contact=children[0].textContent;
+     let name=children[1].textContent;
+     let email=children[2].textContent;
+    let phone=children[3].textContent;
+     let adress=children[4].textContent;
+    $('#editmodal .id_contact').val(data[0]);
+    $('#editmodal .flname').val(data[1]);
+    $('#editmodal .email').val(data[2]);
+    $('#editmodal .phone').val(data[3]);
+    $('#editmodal .adress').val(data[4]);
+   
+});       
+
 });
 </script>
 </main>

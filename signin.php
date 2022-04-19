@@ -14,17 +14,17 @@ $signin->islogged();
 </head>
 <body>
             <?php include('navBar.php')?>
-
+            
             <main class="container-fluid ">
                 <section class="row ">
                     <div class="col-12 col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 mt-5 pt-5">
                        
-                    <?php include('message.php') ?>
+                            <?php include('message.php') ?>
                                         
-                    <div class="card shadow ">
-                            <div class="card-body p-5 ">
-                                <h1 class="text-start border-start border-5 border-primary ps-1 fw-bold">Gestion Contact</h1>
-                                <h2 class="h3 text-center text-uppercase mb-3 fw-bold">Sign in </h2>
+                          <div class="card shadow ">
+                            <div class="card-body p-5">
+                                <h2 class="text-start border-start border-5 border-primary ps-1 fw-bold">Gestion Contact</h2>
+                                <h6 class="h5 text-center text-uppercase mb-3 fw-bold">Sign in </h6>
                                 <p class="text-center "> Enter your credentials to access your account </p>
                                 <form method="POST" action="">                   
                                     <div class="mb-3 form-group">
@@ -46,11 +46,11 @@ $signin->islogged();
                                     <button type="submit" name="login" class="btn btn-primary w-100 fw-bold">Login</button>
                                 </form>
                             </div>
-                            <div class="text-center"> 
+                            <div class="text-center mt-4 p-3"> 
                                 <span class="">
                                 No account?
                                 </span>
-                                <a href="signup.php" class="">Sign up</a> <span class="mt-3">here.</span>
+                                <a href="signup.php" class="">Sign up</a> <span class="mt-6">here.</span>
 
                             </div>
                         </div>

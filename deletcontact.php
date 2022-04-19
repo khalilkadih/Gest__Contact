@@ -11,11 +11,11 @@ if(isset($_POST['id_contact']))
     $contact = new controllContact;
     $res=$contact->deletContact($id_contact);
     if($res){
-         redirect('Contact deleted Successfully','contact.php');
+         redirect('Contact deleted Successfully','contact.php','success');
     }
     else 
     {
-         redirect('Something Wrong','profil.php');
+         redirect('Something Wrong','profil.php','success');
     }
 
 

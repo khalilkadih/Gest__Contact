@@ -21,11 +21,11 @@ $dataContactToInsert=$contact->InsertContact($dataInput);
 // echo $dataContactToInsert;
 
 if($dataContactToInsert){
-    redirect('Contact added successfully','contact.php');
+    redirect('Contact added successfully','contact.php','success');
 }
 else{
 
-    redirect('something Wrong !!! ,please Try Again ','contact.php');
+    redirect('something Wrong !!! ,please Try Again ','contact.php','danger');
 }
 
 ?>
