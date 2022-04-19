@@ -44,7 +44,7 @@ class loginController
     {
         if(isset($_SESSION['authenticated']) === TRUE)
         {
-            redirect('You are already in login ','index.php');
+            redirect('You are already in login ','index.php','danger');
         }
         else 
         {
