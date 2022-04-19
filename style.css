@@ -1,0 +1,26 @@
+.form-control input:focus {
+    outline: 0;
+    border-color: aqua !important;
+}
+
+.form-control.success input {
+    border-color: rgb(137, 250, 137);
+}
+
+.form-control.error input {
+    border-color: rgb(189, 75, 75);
+}
+small {
+    color: rgb(167, 0, 0);
+    /* position: absolute;
+    bottom: 0;
+    left:0; */
+    visibility:hidden;
+}
+.form-control.error small {
+    visibility: visible;
+}
+
+
+
+
