@@ -17,7 +17,7 @@ class AuthentificationController
 
         if(!isset($_SESSION['authenticated']))
         {
-            redirect('Login to Access this Page','signin.php');
+            redirect('Login to Access this Page','signin.php','success');
             return false;
         }
         else
@@ -43,7 +43,7 @@ class AuthentificationController
                 }
             else{
 
-                redirect('Not Found User!!!','signin.php');
+                redirect('Not Found User!!!','signin.php','danger');
             }
 
         }
