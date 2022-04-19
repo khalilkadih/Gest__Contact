@@ -19,11 +19,13 @@ include("code/authentification_code.php");
 
 function validateInput($dbcnx,$input)
 {
+
     return  mysqli_real_escape_string($dbcnx,$input);
 }
-function redirect($message,$page)
+function redirect($message,$page,$typOfMsg)
 {
     $redirectTo=SITE_URL.$page;
+    $_SESSION['Typemessage']="$typOfMsg"; 
     $_SESSION['message']="$message";
     header("Location: $redirectTo");
     exit(0);
